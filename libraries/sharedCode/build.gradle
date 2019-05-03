@@ -71,4 +71,7 @@ dependencies {
     compile 'commons-io:commons-io:2.4'
     compile 'androidx.annotation:annotation:1.0.0'
     compile files('libs/markdownview-1.2.jar')
+
+    //compile 'us.feras.mdv:markdownview:+'
+
 }
