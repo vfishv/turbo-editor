@@ -61,14 +61,14 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':libraries:FloatingActionButton')
     //    compile 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
-    compile 'org.apache.commons:commons-lang3:3.6'
+    compile 'org.apache.commons:commons-lang3:3.8.1'
     compile files('libs/juniversalchardet-1.0.3.jar')
     compile('com.android.support:appcompat-v7:28.0.0') {
         exclude group: 'com.android.support', module: 'support-v4'
     }
     compile 'com.android.support:support-v4:28.0.0'
     compile 'com.github.gabrielemariotti.changeloglib:library:+'
-    compile 'commons-io:commons-io:2.4'
+    compile 'commons-io:commons-io:2.6'
     compile 'com.android.support:support-annotations:+'
     compile files('libs/markdownview-1.2.jar')
 }
