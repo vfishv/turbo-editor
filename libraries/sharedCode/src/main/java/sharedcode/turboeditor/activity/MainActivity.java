@@ -40,6 +40,7 @@ import android.provider.DocumentsContract;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.MenuItemCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -208,7 +209,7 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
         /* First Time we open this activity */
         if (savedInstanceState == null) {
             // Open
-            mDrawerLayout.openDrawer(Gravity.START);
+            mDrawerLayout.openDrawer(GravityCompat.START);
             // Set the default title
             getSupportActionBar().setTitle(getString(R.string.nome_app_turbo_editor));
         }
@@ -302,10 +303,10 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
             if (PreferenceHelper.getIgnoreBackButton(this))
                 return;
 
-            if (mDrawerLayout.isDrawerOpen(Gravity.START) && fileOpened) {
-                mDrawerLayout.closeDrawer(Gravity.START);
-            } else if (mDrawerLayout.isDrawerOpen(Gravity.END) && fileOpened) {
-                mDrawerLayout.closeDrawer(Gravity.END);
+            if (mDrawerLayout.isDrawerOpen(GravityCompat.START) && fileOpened) {
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+            } else if (mDrawerLayout.isDrawerOpen(GravityCompat.END) && fileOpened) {
+                mDrawerLayout.closeDrawer(GravityCompat.END);
             } else if (fileOpened && mEditor.canSaveFile()) {
                 new SaveFileDialog(greatUri, pageSystem.getAllText(mEditor
                         .getText().toString()), currentEncoding).show(getFragmentManager(),
@@ -320,8 +321,8 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
 
                 closedTheFile();
 
-                mDrawerLayout.openDrawer(Gravity.START);
-                mDrawerLayout.closeDrawer(Gravity.END);
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                mDrawerLayout.closeDrawer(GravityCompat.END);
             } else {
                 showInterstitial();
                 super.onBackPressed();
@@ -485,7 +486,7 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
         int i = item.getItemId();
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             Toast.makeText(getBaseContext(), "drawer click", Toast.LENGTH_SHORT).show();
-            mDrawerLayout.closeDrawer(Gravity.END);
+            mDrawerLayout.closeDrawer(GravityCompat.END);
             return true;
         } else if (i == R.id.im_save_normaly) {
             saveTheFile(false);
@@ -931,7 +932,7 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
             protected void onPreExecute() {
                 super.onPreExecute();
                 // Close the drawer
-                mDrawerLayout.closeDrawer(Gravity.START);
+                mDrawerLayout.closeDrawer(GravityCompat.START);
                 progressDialog = new ProgressDialog(MainActivity.this);
                 progressDialog.setMessage(getString(R.string.please_wait));
                 progressDialog.show();
@@ -979,7 +980,7 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
                     fileText = "";
                 }
 
-                while (mDrawerLayout.isDrawerOpen(Gravity.START)) {
+                while (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
                     try {
                         Thread.sleep(50);
                     } catch (InterruptedException e) {
@@ -1255,8 +1256,8 @@ public abstract class MainActivity extends AppCompatActivity implements IHomeAct
     }
 
     public void OpenSettings(View view) {
-        mDrawerLayout.closeDrawer(Gravity.START);
-        mDrawerLayout.openDrawer(Gravity.END);
+        mDrawerLayout.closeDrawer(GravityCompat.START);
+        mDrawerLayout.openDrawer(GravityCompat.END);
     }
     //endregion
 
