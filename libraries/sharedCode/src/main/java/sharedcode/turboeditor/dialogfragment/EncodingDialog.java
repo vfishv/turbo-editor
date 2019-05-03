@@ -42,7 +42,7 @@ public class EncodingDialog extends DialogFragment implements AdapterView.OnItem
             Constants.CHARSET_EUC_JP,
             Constants.CHARSET_EUC_KR,
             Constants.CHARSET_EUC_TW,
-            //Constants.CHARSET_GB18030,//"GB18030".intern(),
+            "GB18030",//Constants.CHARSET_GB18030,//"GB18030".intern(),
             "GB2312",
             Constants.CHARSET_IBM855,
             Constants.CHARSET_IBM866,
