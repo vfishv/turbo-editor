@@ -67,7 +67,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-v4'
     }
     compile 'androidx.legacy:legacy-support-v4:1.0.0'
-    compile 'com.github.gabrielemariotti.changeloglib:library:+'
+    compile 'com.github.gabrielemariotti.changeloglib:changelog:2.1.0'
     compile 'commons-io:commons-io:2.4'
     compile 'androidx.annotation:annotation:1.0.0'
     compile files('libs/markdownview-1.2.jar')
