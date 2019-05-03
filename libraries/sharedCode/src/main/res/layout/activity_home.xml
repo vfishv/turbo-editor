@@ -82,7 +82,7 @@
                         android:text=""
                         android:textIsSelectable="true" />
                 </HorizontalScrollView>
-    </sharedcode.turboeditor.views.GoodScrollView>
+            </sharedcode.turboeditor.views.GoodScrollView>
 
             <com.faizmalkani.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabNext"
@@ -115,7 +115,7 @@
             <sharedcode.turboeditor.util.AccessoryView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/accessoryView"></sharedcode.turboeditor.util.AccessoryView>
+                android:id="@+id/accessoryView" />
         </HorizontalScrollView>
         </FrameLayout>
     </LinearLayout>
