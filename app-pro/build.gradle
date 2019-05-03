@@ -22,8 +22,8 @@ import java.util.regex.Pattern
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.maskyn.fileeditorpro"
@@ -57,6 +57,7 @@ dependencies {
     compile project(':libraries:sharedCode')
 }
 
+/*
 task incrementVersionCode << {
     println(":incrementVersionCode - Incrementing Version Code...")
     def buildGradleFile = file("build.gradle")
@@ -71,3 +72,4 @@ task incrementVersionCode << {
     println(":incrementVersionCode - next versionCode=" + mNextVersionCode);
     buildGradleFile.write(manifestContent)
 }
+*/
